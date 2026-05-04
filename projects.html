@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — NAX Electrical Services, LLC</title>
+<meta name="description" content="NAX Electrical Services project portfolio — commercial electrical, fire alarm, access control, and low voltage across Eastern Massachusetts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--ink-2:#111111;--ink-3:#1a1a1a;--warm-white:#f5f5f5;--rule:rgba(0,0,0,0.08);--rule-mid:rgba(0,0,0,0.15);--amber:#f5c400;--amber-light:#ffd500;--amber-pale:rgba(245,196,0,0.08);--amber-mid:rgba(245,196,0,0.28);--text:#111111;--text-2:#444444;--text-3:#888888;--inv:rgba(245,245,245,0.92);--inv-2:rgba(245,245,245,0.50);--inv-3:rgba(245,245,245,0.18);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--warm-white);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:#0a0a0a;border-bottom:2px solid var(--amber);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo-img{height:44px;width:auto;display:block;object-fit:contain;}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(245,245,245,0.55);transition:color .2s;position:relative;padding-bottom:2px;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.4,0,.2,1);}
+.nav-links a:hover{color:#f5f5f5;}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}.nav-links a.active{color:#f5f5f5;}
+.nav-btn{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a!important;background:var(--amber);padding:11px 22px;display:inline-flex;align-items:center;gap:7px;transition:background .22s;}
+.nav-btn::after{display:none!important;}.nav-btn:hover{background:var(--amber-light)!important;}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:#f5f5f5;transition:transform .3s,opacity .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.wrap{max-width:1300px;margin:0 auto;padding:0 56px;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.35,0,.15,1),transform .75s cubic-bezier(.35,0,.15,1);}
+.reveal.in{opacity:1;transform:none;}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.32s;}.rd4{transition-delay:.44s;}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+/* PAGE HERO */
+.page-hero{padding-top:72px;background:var(--ink);position:relative;overflow:hidden;min-height:48vh;display:flex;align-items:flex-end;}
+.page-hero-glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(120px);width:600px;height:600px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(245,196,0,0.08) 0%,transparent 65%);}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,248,244,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(249,248,244,0.022) 1px,transparent 1px);background-size:68px 68px;}
+.page-hero-inner{position:relative;z-index:2;padding:64px 0 72px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;}
+.page-hero-inner>*{animation:fadeup .9s cubic-bezier(.35,0,.15,1) both;}
+.page-hero-inner>*:nth-child(1){animation-delay:.08s;}.page-hero-inner>*:nth-child(2){animation-delay:.26s;}
+.page-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.page-ey-line{width:32px;height:1px;background:var(--amber);}
+.page-ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+.page-hero h1{font-family:var(--serif);font-size:clamp(40px,5vw,80px);font-weight:300;line-height:1.0;letter-spacing:-.02em;color:var(--warm-white);}
+.page-hero h1 em{font-style:italic;color:var(--amber);}
+.page-hero-right{display:flex;flex-direction:column;justify-content:flex-end;gap:20px;}
+.page-hero-desc{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--inv-2);line-height:1.85;max-width:400px;}
+.page-hero-stats{display:flex;gap:0;border-top:1px solid rgba(249,248,244,0.08);padding-top:20px;}
+.page-hero-stat{flex:1;display:flex;flex-direction:column;gap:3px;padding-right:20px;}
+.page-hero-stat:last-child{padding-right:0;}
+.page-hero-stat-val{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--warm-white);line-height:1;}
+.page-hero-stat-val em{font-style:normal;font-size:16px;color:var(--amber);}
+.page-hero-stat-label{font-family:var(--sans);font-size:9px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--inv-2);}
+
+/* FILTER BAR */
+.filter-section{background:var(--ink-2);border-bottom:1px solid rgba(249,248,244,0.06);}
+.filter-inner{display:flex;align-items:center;gap:2px;padding:20px 0;flex-wrap:wrap;}
+.f-btn{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--inv-3);padding:9px 18px;border:1px solid rgba(249,248,244,0.07);background:transparent;cursor:pointer;transition:all .22s;white-space:nowrap;}
+.f-btn:hover{color:var(--inv);border-color:rgba(249,248,244,0.2);}
+.f-btn.active{background:var(--amber);color:var(--ink);border-color:var(--amber);}
+
+/* PROJECTS GRID */
+.projects-section{background:var(--warm-white);padding:64px 0 100px;}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+
+/* PROJECT CARD */
+.project-card{
+  position:relative;height:420px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:var(--ink-3);
+  transition:opacity .38s ease,transform .38s ease;
+}
+.project-card-bg{position:absolute;inset:0;transition:transform .7s cubic-bezier(.4,0,.2,1);}
+.project-card:hover .project-card-bg{transform:scale(1.05);}
+
+/* Placeholder colored backgrounds until real photos arrive */
+.project-card[data-project="juniper-hill"] .project-card-bg{background:linear-gradient(135deg,#0f1a0f 0%,#1a2a1a 100%);}
+.project-card[data-project="brewster"] .project-card-bg{background:linear-gradient(135deg,#0f0f1a 0%,#1a1a2a 100%);}
+.project-card[data-project="harwich"] .project-card-bg{background:linear-gradient(135deg,#1a0f0f 0%,#2a1a1a 100%);}
+.project-card[data-project="chatham"] .project-card-bg{background:linear-gradient(135deg,#1a1a0f 0%,#2a2a1a 100%);}
+.project-card[data-project="northstar"] .project-card-bg{background:linear-gradient(135deg,#0f1a1a 0%,#1a2a2a 100%);}
+.project-card[data-project="brookmeadow"] .project-card-bg{background:linear-gradient(135deg,#1a0f1a 0%,#2a1a2a 100%);}
+.project-card[data-project="osterville"] .project-card-bg{background:linear-gradient(135deg,#0a1218 0%,#1a2028 100%);}
+.project-card[data-project="cape-view"] .project-card-bg{background:linear-gradient(135deg,#181208 0%,#2a1e10 100%);}
+
+.project-card-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.97) 0%,rgba(10,10,10,.35) 45%,rgba(10,10,10,.04) 72%,transparent 100%);
+  transition:opacity .4s;
+}
+.project-card:hover .project-card-overlay{opacity:.85;}
+.project-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.4,0,.2,1);z-index:4;}
+.project-card:hover::after{transform:scaleX(1);}
+.project-card-content{position:relative;z-index:3;padding:28px;transform:translateY(6px);transition:transform .4s cubic-bezier(.4,0,.2,1);}
+.project-card:hover .project-card-content{transform:translateY(0);}
+.project-card-disc{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:10px;opacity:0;transform:translateY(5px);transition:opacity .3s .05s,transform .3s .05s;}
+.project-card:hover .project-card-disc{opacity:1;transform:none;}
+.project-card-disc::before{content:'';width:12px;height:1px;background:var(--amber);}
+.project-card h3{font-family:var(--serif);font-size:clamp(20px,2vw,28px);font-weight:300;color:var(--warm-white);line-height:1.1;margin-bottom:6px;letter-spacing:-.005em;}
+.project-card h3 em{font-style:italic;color:var(--amber);}
+.project-card-location{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-2);letter-spacing:.08em;}
+.project-card-arrow{
+  position:absolute;bottom:28px;right:28px;z-index:3;
+  width:36px;height:36px;border:1px solid rgba(245,196,0,0.3);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateX(6px);
+  transition:opacity .3s,transform .3s,background .2s,border-color .2s;
+}
+.project-card:hover .project-card-arrow{opacity:1;transform:none;}
+.project-card-arrow:hover{background:var(--amber);border-color:var(--amber);}
+.project-card-arrow svg{width:14px;height:14px;stroke:var(--amber);fill:none;stroke-width:2;}
+.project-card-arrow:hover svg{stroke:#0a0a0a;}
+
+/* FEATURED CARD — spans 2 cols */
+.project-card-featured{grid-column:1/3;height:520px;}
+.project-card-featured h3{font-size:clamp(28px,3vw,42px);}
+
+/* CTA BAND */
+.cta-band{background:var(--amber);padding:72px 0;}
+.cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-band h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,48px);font-weight:300;line-height:1.1;letter-spacing:-.01em;color:var(--ink);}
+.cta-band h2 em{font-style:italic;}
+.cta-band-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--warm-white);font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:15px 30px;transition:background .22s;}
+.btn-dark:hover{background:var(--ink-3);}
+.btn-ghost-dark{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid rgba(10,10,10,0.3);padding-bottom:2px;transition:border-color .2s;}
+.btn-ghost-dark:hover{border-color:var(--ink);}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:2px solid var(--amber);padding:72px 0 40px;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:56px;}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--warm-white);letter-spacing:.04em;margin-bottom:16px;}
+.footer-tagline{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);line-height:1.8;max-width:280px;margin-bottom:24px;}
+.footer-contact a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);margin-bottom:6px;transition:color .2s;}
+.footer-contact a:hover{color:var(--amber);}
+.footer-col-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);transition:color .2s;}
+.footer-links a:hover{color:var(--warm-white);}
+.footer-bottom{border-top:1px solid rgba(249,248,244,0.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy,.footer-lic{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-3);letter-spacing:.06em;}
+
+@media(max-width:1024px){nav{padding:0 32px;}.wrap{padding:0 32px;}.page-hero-inner{grid-template-columns:1fr;}.projects-grid{grid-template-columns:1fr 1fr;}.project-card-featured{grid-column:1/3;}.footer-inner{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:768px){nav{padding:0 20px;}.wrap{padding:0 20px;}.nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--ink);padding:32px 20px;border-top:1px solid rgba(249,248,244,0.07);overflow-y:auto;}.nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(249,248,244,0.06);}.nav-links a{padding:16px 0;font-size:13px;color:var(--inv-2);}.nav-links a::after{display:none;}.nav-btn{margin-top:16px;justify-content:center;}.nav-hamburger{display:flex;}.projects-grid{grid-template-columns:1fr;}.project-card-featured{grid-column:1;}.footer-inner{grid-template-columns:1fr;}.cta-band-inner{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/nax-logo.png" alt="NAX Electrical Services" class="nav-logo-img"></a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-btn">Request a Quote <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-grid"></div>
+  <div class="wrap" style="width:100%;">
+    <div class="page-hero-inner">
+      <div>
+        <div class="page-eyebrow"><div class="page-ey-line"></div><span class="page-ey-text">Our Work</span></div>
+        <h1>Projects that<br><em>speak for themselves.</em></h1>
+      </div>
+      <div class="page-hero-right">
+        <p class="page-hero-desc">Commercial, residential, and institutional projects across Eastern Massachusetts — from Cape Cod to Greater Boston. Each one delivered on schedule, on budget, with complete closeout documentation.</p>
+        <div class="page-hero-stats">
+          <div class="page-hero-stat"><div class="page-hero-stat-val">8<em>+</em></div><div class="page-hero-stat-label">Projects Featured</div></div>
+          <div class="page-hero-stat"><div class="page-hero-stat-val">5</div><div class="page-hero-stat-label">Disciplines</div></div>
+          <div class="page-hero-stat"><div class="page-hero-stat-val">MA</div><div class="page-hero-stat-label">Eastern Massachusetts</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-section">
+  <div class="wrap">
+    <div class="filter-inner">
+      <button class="f-btn active" onclick="filterProjects('all',this)">All Projects</button>
+      <button class="f-btn" onclick="filterProjects('electrical',this)">Electrical</button>
+      <button class="f-btn" onclick="filterProjects('fire-alarm',this)">Fire Alarm</button>
+      <button class="f-btn" onclick="filterProjects('access-control',this)">Access Control</button>
+      <button class="f-btn" onclick="filterProjects('low-voltage',this)">Low Voltage</button>
+      <button class="f-btn" onclick="filterProjects('multi-family',this)">Multi-Family</button>
+      <button class="f-btn" onclick="filterProjects('commercial',this)">Commercial</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS GRID -->
+<section class="projects-section">
+  <div class="wrap">
+    <div class="projects-grid">
+
+      <!-- JUNIPER HILL — Featured -->
+      <a href="projects/juniper-hill.html" class="project-card project-card-featured reveal" data-project="juniper-hill" data-discipline="electrical fire-alarm access-control multi-family">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Fire Alarm · Access Control</div>
+          <h3>Juniper Hill<br><em>Wellfleet, MA</em></h3>
+          <div class="project-card-location">46 Units · 8 Buildings · Multi-Family · Cape Cod</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- BREWSTER -->
+      <a href="projects/brewster.html" class="project-card reveal rd1" data-project="brewster" data-discipline="electrical multi-family">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Multi-Family</div>
+          <h3>Brewster<br><em>Project</em></h3>
+          <div class="project-card-location">Brewster, MA · Cape Cod</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- HARWICH -->
+      <a href="projects/harwich.html" class="project-card reveal rd2" data-project="harwich" data-discipline="electrical fire-alarm multi-family">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Fire Alarm</div>
+          <h3>Harwich<br><em>Project</em></h3>
+          <div class="project-card-location">Harwich, MA · Cape Cod</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- CHATHAM -->
+      <a href="projects/chatham.html" class="project-card reveal rd1" data-project="chatham" data-discipline="electrical commercial">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Commercial</div>
+          <h3>Chatham<br><em>Project</em></h3>
+          <div class="project-card-location">Chatham, MA · Cape Cod</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- NORTHSTAR -->
+      <a href="projects/northstar.html" class="project-card reveal rd2" data-project="northstar" data-discipline="electrical fire-alarm access-control commercial">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Fire Alarm · Access Control</div>
+          <h3>Northstar<br><em>Project</em></h3>
+          <div class="project-card-location">Eastern Massachusetts</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- BROOKMEADOW -->
+      <a href="projects/brookmeadow.html" class="project-card reveal rd3" data-project="brookmeadow" data-discipline="electrical low-voltage commercial">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Low Voltage</div>
+          <h3>Brookmeadow<br><em>Project</em></h3>
+          <div class="project-card-location">Eastern Massachusetts</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- OSTERVILLE BAPTIST CHURCH -->
+      <a href="projects/osterville.html" class="project-card reveal rd1" data-project="osterville" data-discipline="electrical fire-alarm commercial">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Fire Alarm</div>
+          <h3>Osterville Baptist<br><em>Church</em></h3>
+          <div class="project-card-location">Osterville, MA · Cape Cod</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+      <!-- CAPE VIEW WAY -->
+      <a href="projects/cape-view.html" class="project-card reveal rd2" data-project="cape-view" data-discipline="electrical multi-family">
+        <div class="project-card-bg"></div>
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <div class="project-card-disc">Electrical · Multi-Family</div>
+          <h3>Cape View Way<br><em>Project</em></h3>
+          <div class="project-card-location">Cape Cod, MA</div>
+        </div>
+        <div class="project-card-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <h2>Have a project<br><em>in mind?</em></h2>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn-dark">Request a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="services.html" class="btn-ghost-dark">What We Do →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div><div class="footer-logo">NAX Electrical Services, LLC</div><p class="footer-tagline">Commercial electrical, fire alarm, access control, structured cabling, and CCTV across Eastern Massachusetts. One contract. Full accountability.</p><div class="footer-contact"><a href="tel:5082960552">508-296-0552</a><a href="mailto:estimating@naxelectric.com">estimating@naxelectric.com</a><span style="font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);margin-top:6px;display:block;">Eastern Massachusetts · Cape Cod to Greater Boston</span></div></div>
+      <div><div class="footer-col-label">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">What We Do</a></li><li><a href="projects.html">Projects</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="services.html">Commercial Electrical</a></li><li><a href="services.html">CCTV &amp; Surveillance</a></li><li><a href="services.html">Card Access Control</a></li><li><a href="services.html">Structured Cabling</a></li><li><a href="services.html">Fire Alarm Systems</a></li><li><a href="services.html">Standby Generators</a></li></ul></div>
+      <div><div class="footer-col-label">Industries</div><ul class="footer-links"><li><a href="services.html">Commercial</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Higher Education</a></li><li><a href="services.html">Multi-Family</a></li><li><a href="services.html">Government</a></li><li><a href="services.html">Hospitality</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 NAX Electrical Services LLC. All rights reserved.</span><span class="footer-lic">MA Licensed Electrical Contractor · MBE Certified · Bondable · Insured</span></div>
+  </div>
+</footer>
+<script>
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const hamburger=document.getElementById('hamburger');const navLinks=document.getElementById('nav-links');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');navLinks.classList.remove('open');}));
+function filterProjects(disc,btn){
+  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card=>{
+    const d=card.dataset.discipline||'';
+    const show=disc==='all'||d.includes(disc);
+    card.style.opacity=show?'1':'0.1';
+    card.style.transform=show?'scale(1)':'scale(0.98)';
+    card.style.pointerEvents=show?'auto':'none';
+  });
+}
+</script>
+</body>
+</html>

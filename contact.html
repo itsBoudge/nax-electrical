@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — NAX Electrical Services, LLC</title>
+<meta name="description" content="Request a quote from NAX Electrical Services. We serve Eastern Massachusetts from Cape Cod to Greater Boston. Speak directly with an estimator or project manager.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--ink-2:#111111;--ink-3:#1a1a1a;--warm-white:#f5f5f5;--rule:rgba(0,0,0,0.08);--rule-mid:rgba(0,0,0,0.15);--amber:#f5c400;--amber-light:#ffd500;--amber-pale:rgba(245,196,0,0.08);--amber-mid:rgba(245,196,0,0.28);--text:#111111;--text-2:#444444;--text-3:#888888;--inv:rgba(245,245,245,0.92);--inv-2:rgba(245,245,245,0.50);--inv-3:rgba(245,245,245,0.18);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:#0a0a0a;border-bottom:2px solid var(--amber);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo-img{height:44px;width:auto;display:block;object-fit:contain;}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(245,245,245,0.55);transition:color .2s;position:relative;padding-bottom:2px;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.4,0,.2,1);}
+.nav-links a:hover{color:#f5f5f5;}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}.nav-links a.active{color:#f5f5f5;}
+.nav-btn{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a!important;background:var(--amber);padding:11px 22px;display:inline-flex;align-items:center;gap:7px;transition:background .22s;}
+.nav-btn::after{display:none!important;}.nav-btn:hover{background:var(--amber-light)!important;}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:#f5f5f5;transition:transform .3s,opacity .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.wrap{max-width:1300px;margin:0 auto;padding:0 56px;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.35,0,.15,1),transform .75s cubic-bezier(.35,0,.15,1);}
+.reveal.in{opacity:1;transform:none;}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.32s;}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+/* CONTACT MAIN */
+.contact-main{padding-top:72px;min-height:100vh;display:grid;grid-template-columns:5fr 6fr;}
+
+/* LEFT PANEL */
+.contact-left{
+  background:var(--ink-2);
+  padding:80px 56px 80px 56px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-right:1px solid rgba(249,248,244,0.06);
+  position:relative;overflow:hidden;
+}
+.contact-left-glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(100px);width:500px;height:500px;bottom:-150px;left:-100px;background:radial-gradient(circle,rgba(245,196,0,0.07) 0%,transparent 65%);}
+.contact-left-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,248,244,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(249,248,244,0.018) 1px,transparent 1px);background-size:68px 68px;}
+.contact-left-content{position:relative;z-index:2;}
+.contact-left-content>*{animation:fadeup .9s cubic-bezier(.35,0,.15,1) both;}
+.contact-left-content>*:nth-child(1){animation-delay:.08s;}.contact-left-content>*:nth-child(2){animation-delay:.22s;}.contact-left-content>*:nth-child(3){animation-delay:.36s;}.contact-left-content>*:nth-child(4){animation-delay:.50s;}
+.contact-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.contact-ey-line{width:32px;height:1px;background:var(--amber);}
+.contact-ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+.contact-left h1{font-family:var(--serif);font-size:clamp(36px,4vw,64px);font-weight:300;line-height:1.0;letter-spacing:-.02em;color:var(--warm-white);margin-bottom:24px;}
+.contact-left h1 em{font-style:italic;color:var(--amber);}
+.contact-left-desc{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--inv-2);line-height:1.88;max-width:380px;margin-bottom:48px;}
+.contact-info{}
+.contact-info-item{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;}
+.contact-info-item:last-child{margin-bottom:0;}
+.contact-info-icon{width:36px;height:36px;border:1px solid rgba(245,196,0,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.contact-info-icon svg{width:14px;height:14px;stroke:var(--amber);fill:none;stroke-width:1.5;}
+.contact-info-label{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--inv-3);margin-bottom:4px;}
+.contact-info-val{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--inv-2);line-height:1.5;}
+.contact-info-val a{color:var(--inv-2);transition:color .2s;}
+.contact-info-val a:hover{color:var(--amber);}
+.contact-left-bottom{position:relative;z-index:2;border-top:1px solid rgba(249,248,244,0.07);padding-top:28px;}
+.contact-creds{display:flex;flex-wrap:wrap;gap:8px;}
+.contact-cred{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:var(--inv-3);padding:5px 10px;border:1px solid rgba(249,248,244,0.08);}
+
+/* RIGHT PANEL — FORM */
+.contact-right{background:var(--warm-white);padding:80px 64px 80px 64px;display:flex;flex-direction:column;justify-content:center;}
+.form-header{margin-bottom:48px;animation:fadeup .9s .2s cubic-bezier(.35,0,.15,1) both;}
+.form-header h2{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1.05;letter-spacing:-.01em;color:var(--ink);margin-bottom:10px;}
+.form-header h2 em{font-style:italic;color:var(--amber);}
+.form-header p{font-family:var(--sans);font-size:13px;font-weight:300;color:var(--text-2);line-height:1.8;}
+
+/* FORM STYLES */
+.contact-form{animation:fadeup .9s .35s cubic-bezier(.35,0,.15,1) both;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px;}
+.form-group:last-of-type{margin-bottom:0;}
+.form-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);}
+.form-label span{color:var(--amber);}
+.form-input,.form-select,.form-textarea{
+  font-family:var(--sans);font-size:13px;font-weight:300;color:var(--text);
+  background:#ffffff;border:1px solid var(--rule-mid);
+  padding:13px 16px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  -webkit-appearance:none;appearance:none;
+  border-radius:0;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--amber);box-shadow:0 0 0 3px rgba(245,196,0,0.08);}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--text-3);}
+.form-textarea{resize:vertical;min-height:120px;line-height:1.65;}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer;}
+.form-checkboxes{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}
+.form-checkbox-item{display:flex;align-items:center;gap:8px;cursor:pointer;}
+.form-checkbox-item input[type="checkbox"]{appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1px solid var(--rule-mid);background:#fff;cursor:pointer;flex-shrink:0;position:relative;transition:border-color .2s,background .2s;}
+.form-checkbox-item input[type="checkbox"]:checked{background:var(--amber);border-color:var(--amber);}
+.form-checkbox-item input[type="checkbox"]:checked::after{content:'';position:absolute;left:4px;top:2px;width:6px;height:9px;border:2px solid #0a0a0a;border-left:none;border-top:none;transform:rotate(45deg);}
+.form-checkbox-label{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--text-2);letter-spacing:.04em;}
+.form-divider{height:1px;background:var(--rule);margin:24px 0;}
+.form-submit{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--amber);color:#0a0a0a;
+  font-family:var(--sans);font-size:10.5px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:16px 36px;width:100%;border:none;cursor:pointer;
+  transition:background .22s,box-shadow .22s,transform .22s;
+  margin-top:28px;
+}
+.form-submit:hover{background:var(--amber-light);box-shadow:0 8px 32px rgba(245,196,0,0.3);transform:translateY(-1px);}
+.form-note{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--text-3);line-height:1.7;margin-top:14px;text-align:center;}
+
+/* SUCCESS STATE */
+.form-success{display:none;text-align:center;padding:60px 40px;}
+.form-success.show{display:block;}
+.form-success-icon{width:56px;height:56px;background:var(--amber);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;}
+.form-success-icon svg{width:24px;height:24px;stroke:#0a0a0a;fill:none;stroke-width:2;}
+.form-success h3{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);margin-bottom:12px;}
+.form-success p{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--text-2);line-height:1.8;}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:2px solid var(--amber);padding:72px 0 40px;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:56px;}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--warm-white);letter-spacing:.04em;margin-bottom:16px;}
+.footer-tagline{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);line-height:1.8;max-width:280px;margin-bottom:24px;}
+.footer-contact a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);margin-bottom:6px;transition:color .2s;}
+.footer-contact a:hover{color:var(--amber);}
+.footer-col-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);transition:color .2s;}
+.footer-links a:hover{color:var(--warm-white);}
+.footer-bottom{border-top:1px solid rgba(249,248,244,0.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy,.footer-lic{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-3);letter-spacing:.06em;}
+
+@media(max-width:1024px){nav{padding:0 32px;}.wrap{padding:0 32px;}.contact-main{grid-template-columns:1fr;}.contact-left{padding:100px 32px 60px;}.contact-right{padding:60px 32px;}.footer-inner{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:768px){nav{padding:0 20px;}.wrap{padding:0 20px;}.nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--ink);padding:32px 20px;border-top:1px solid rgba(249,248,244,0.07);overflow-y:auto;}.nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(249,248,244,0.06);}.nav-links a{padding:16px 0;font-size:13px;color:var(--inv-2);}.nav-links a::after{display:none;}.nav-btn{margin-top:16px;justify-content:center;}.nav-hamburger{display:flex;}.form-row{grid-template-columns:1fr;}.contact-right{padding:48px 20px;}.footer-inner{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/nax-logo.png" alt="NAX Electrical Services" class="nav-logo-img"></a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="active nav-btn">Request a Quote <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+  </ul>
+</nav>
+
+<div class="contact-main">
+  <!-- LEFT -->
+  <div class="contact-left">
+    <div class="contact-left-glow"></div>
+    <div class="contact-left-grid"></div>
+    <div class="contact-left-content">
+      <div class="contact-eyebrow"><div class="contact-ey-line"></div><span class="contact-ey-text">Get in Touch</span></div>
+      <h1>Ready when<br><em>you are.</em></h1>
+      <p class="contact-left-desc">Whether you are a developer, engineer, or general contractor, we are ready to review your scope and return a detailed, accurate quote. When you reach out you will speak directly with an estimator or project manager who can address your scope immediately.</p>
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="contact-info-label">Phone</div><div class="contact-info-val"><a href="tel:5082960552">508-296-0552</a></div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-info-label">Estimating</div><div class="contact-info-val"><a href="mailto:estimating@naxelectric.com">estimating@naxelectric.com</a></div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-info-label">Service Area</div><div class="contact-info-val">Eastern Massachusetts<br>Cape Cod to Greater Boston</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-info-label">Response Time</div><div class="contact-info-val">We respond promptly to every inquiry. Bring your plans, your questions, or just a description of what you need.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-left-bottom">
+      <div class="contact-creds">
+        <span class="contact-cred">MA Licensed EC</span>
+        <span class="contact-cred">MBE Certified</span>
+        <span class="contact-cred">Bondable</span>
+        <span class="contact-cred">Insured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT — FORM -->
+  <div class="contact-right">
+    <div class="form-header">
+      <h2>Let's talk about<br><em>your project.</em></h2>
+      <p>Fill out the form below and we'll get back to you promptly. Or call us directly at <a href="tel:5082960552" style="color:var(--amber);">508-296-0552</a>.</p>
+    </div>
+
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID after signup at formspree.io -->
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="fname">First Name <span>*</span></label>
+          <input class="form-input" type="text" id="fname" name="first_name" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lname">Last Name <span>*</span></label>
+          <input class="form-input" type="text" id="lname" name="last_name" placeholder="Smith" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span>*</span></label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="you@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone</label>
+          <input class="form-input" type="tel" id="phone" name="phone" placeholder="508-000-0000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="company">Company / Organization</label>
+        <input class="form-input" type="text" id="company" name="company" placeholder="Your company name">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="role">Your Role</label>
+        <select class="form-select" id="role" name="role">
+          <option value="" disabled selected>Select your role</option>
+          <option>General Contractor</option>
+          <option>Developer / Owner</option>
+          <option>Architect / Engineer</option>
+          <option>Property Manager</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-divider"></div>
+      <div class="form-group">
+        <label class="form-label">Services Needed</label>
+        <div class="form-checkboxes">
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="Electrical"><span class="form-checkbox-label">Electrical</span></label>
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="Fire Alarm"><span class="form-checkbox-label">Fire Alarm</span></label>
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="Access Control"><span class="form-checkbox-label">Access Control</span></label>
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="CCTV"><span class="form-checkbox-label">CCTV</span></label>
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="Structured Cabling"><span class="form-checkbox-label">Structured Cabling</span></label>
+          <label class="form-checkbox-item"><input type="checkbox" name="services" value="Not Sure"><span class="form-checkbox-label">Not Sure Yet</span></label>
+        </div>
+      </div>
+      <div class="form-group" style="margin-top:16px;">
+        <label class="form-label" for="project">Project Description <span>*</span></label>
+        <textarea class="form-textarea" id="project" name="message" placeholder="Tell us about your project — location, size, scope, timeline, or anything else that would help us understand what you need." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <p class="form-note">We respond promptly to every inquiry. You'll hear from an estimator or project manager directly — not a scheduler or intake form.</p>
+    </form>
+
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3>Message received.</h3>
+      <p>We'll be in touch shortly. If your project is time-sensitive, call us directly at <a href="tel:5082960552" style="color:var(--amber);">508-296-0552</a>.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div><div class="footer-logo">NAX Electrical Services, LLC</div><p class="footer-tagline">Commercial electrical, fire alarm, access control, structured cabling, and CCTV across Eastern Massachusetts. One contract. Full accountability.</p><div class="footer-contact"><a href="tel:5082960552">508-296-0552</a><a href="mailto:estimating@naxelectric.com">estimating@naxelectric.com</a><span style="font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);margin-top:6px;display:block;">Eastern Massachusetts · Cape Cod to Greater Boston</span></div></div>
+      <div><div class="footer-col-label">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">What We Do</a></li><li><a href="projects.html">Projects</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="services.html">Commercial Electrical</a></li><li><a href="services.html">CCTV &amp; Surveillance</a></li><li><a href="services.html">Card Access Control</a></li><li><a href="services.html">Structured Cabling</a></li><li><a href="services.html">Fire Alarm Systems</a></li><li><a href="services.html">Standby Generators</a></li></ul></div>
+      <div><div class="footer-col-label">Industries</div><ul class="footer-links"><li><a href="services.html">Commercial</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Higher Education</a></li><li><a href="services.html">Multi-Family</a></li><li><a href="services.html">Government</a></li><li><a href="services.html">Hospitality</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 NAX Electrical Services LLC. All rights reserved.</span><span class="footer-lic">MA Licensed Electrical Contractor · MBE Certified · Bondable · Insured</span></div>
+  </div>
+</footer>
+<script>
+const hamburger=document.getElementById('hamburger');const navLinks=document.getElementById('nav-links');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');navLinks.classList.remove('open');}));
+
+// Form submission handler
+const form=document.getElementById('contact-form');
+const success=document.getElementById('form-success');
+form.addEventListener('submit',async(e)=>{
+  e.preventDefault();
+  const btn=form.querySelector('.form-submit');
+  btn.textContent='Sending...';btn.disabled=true;
+  try{
+    const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(res.ok){form.style.display='none';success.classList.add('show');}
+    else{btn.textContent='Send Message';btn.disabled=false;alert('Something went wrong. Please try again or call us directly.');}
+  }catch(err){btn.textContent='Send Message';btn.disabled=false;alert('Something went wrong. Please call us at 508-296-0552.');}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What We Do — NAX Electrical Services, LLC</title>
+<meta name="description" content="NAX delivers commercial electrical, fire alarm, access control, structured cabling, CCTV, and project management under one contract across Eastern Massachusetts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a0a0a;--ink-2:#111111;--ink-3:#1a1a1a;--warm-white:#f5f5f5;--parchment:#eeeeee;--surface:#e8e8e8;--rule:rgba(0,0,0,0.08);--rule-mid:rgba(0,0,0,0.15);--amber:#f5c400;--amber-light:#ffd500;--amber-pale:rgba(245,196,0,0.08);--amber-mid:rgba(245,196,0,0.28);--text:#111111;--text-2:#444444;--text-3:#888888;--inv:rgba(245,245,245,0.92);--inv-2:rgba(245,245,245,0.50);--inv-3:rgba(245,245,245,0.18);--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--warm-white);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{text-decoration:none;color:inherit;}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:#0a0a0a;border-bottom:2px solid var(--amber);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo-img{height:44px;width:auto;display:block;object-fit:contain;}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
+.nav-links a{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:rgba(245,245,245,0.55);transition:color .2s;position:relative;padding-bottom:2px;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.4,0,.2,1);}
+.nav-links a:hover{color:#f5f5f5;}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}.nav-links a.active{color:#f5f5f5;}
+.nav-btn{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0a0a0a!important;background:var(--amber);padding:11px 22px;display:inline-flex;align-items:center;gap:7px;transition:background .22s;}
+.nav-btn::after{display:none!important;}.nav-btn:hover{background:var(--amber-light)!important;}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:#f5f5f5;transition:transform .3s,opacity .3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.wrap{max-width:1300px;margin:0 auto;padding:0 56px;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s cubic-bezier(.35,0,.15,1),transform .75s cubic-bezier(.35,0,.15,1);}
+.reveal.in{opacity:1;transform:none;}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.32s;}.rd4{transition-delay:.44s;}
+.eyebrow{display:flex;align-items:center;gap:13px;margin-bottom:16px;}
+.ey-line{width:30px;height:1px;background:var(--amber);}
+.ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+/* PAGE HERO */
+.page-hero{padding-top:72px;background:var(--ink);position:relative;overflow:hidden;min-height:52vh;display:flex;align-items:flex-end;}
+.page-hero-glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(120px);width:600px;height:600px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(245,196,0,0.08) 0%,transparent 65%);}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(249,248,244,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(249,248,244,0.022) 1px,transparent 1px);background-size:68px 68px;}
+.page-hero-inner{position:relative;z-index:2;padding:64px 0 72px;width:100%;}
+.page-hero-inner>*{animation:fadeup .9s cubic-bezier(.35,0,.15,1) both;}
+.page-hero-inner>*:nth-child(1){animation-delay:.08s;}.page-hero-inner>*:nth-child(2){animation-delay:.22s;}.page-hero-inner>*:nth-child(3){animation-delay:.36s;}
+.page-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.page-ey-line{width:32px;height:1px;background:var(--amber);}
+.page-ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+.page-hero h1{font-family:var(--serif);font-size:clamp(40px,5vw,80px);font-weight:300;line-height:1.0;letter-spacing:-.02em;color:var(--warm-white);margin-bottom:20px;}
+.page-hero h1 em{font-style:italic;color:var(--amber);}
+.page-hero-sub{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--inv-2);max-width:620px;line-height:1.85;}
+
+/* SERVICES OVERVIEW BAR */
+.overview-bar{background:var(--amber);padding:0;}
+.overview-inner{display:grid;grid-template-columns:repeat(4,1fr);}
+.overview-item{padding:28px 32px;border-right:1px solid rgba(10,10,10,0.12);display:flex;align-items:center;gap:14px;transition:background .2s;}
+.overview-item:last-child{border-right:none;}
+.overview-item:hover{background:var(--amber-light);}
+.overview-num{font-family:var(--serif);font-size:22px;font-weight:400;color:rgba(10,10,10,0.35);}
+.overview-name{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);}
+
+/* SERVICE BLOCKS */
+.service-block{padding:100px 0;border-bottom:1px solid var(--rule);}
+.service-block:nth-child(even){background:#ffffff;}
+.service-block:nth-child(odd){background:var(--warm-white);}
+.service-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start;}
+.service-grid.reverse{grid-template-columns:2fr 1fr;}
+.service-meta{}
+.service-num{font-family:var(--serif);font-size:64px;font-weight:300;color:var(--amber);line-height:1;opacity:.25;margin-bottom:8px;display:block;}
+.service-label{font-family:var(--sans);font-size:9px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.service-label::after{content:'';flex:1;height:1px;background:var(--rule-mid);}
+.service-title{font-family:var(--serif);font-size:clamp(28px,3vw,42px);font-weight:300;line-height:1.05;letter-spacing:-.01em;color:var(--ink);margin-bottom:20px;}
+.service-title em{font-style:italic;color:var(--amber);}
+.service-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:20px;}
+.service-tag{font-family:var(--sans);font-size:8.5px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);padding:5px 10px;border:1px solid var(--rule);}
+.service-body{}
+.service-body p{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--text-2);line-height:1.95;margin-bottom:20px;}
+.service-body p:last-child{margin-bottom:0;}
+.service-items{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:32px;}
+.service-item{padding:20px 24px;background:#fff;border:1px solid var(--rule);}
+.service-item-title{font-family:var(--serif);font-size:16px;font-weight:400;color:var(--ink);margin-bottom:6px;}
+.service-item-desc{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--text-2);line-height:1.7;}
+
+/* DARK SERVICE BLOCK */
+.service-block-dark{background:var(--ink);padding:100px 0;border-bottom:1px solid rgba(249,248,244,0.06);}
+.service-block-dark .service-num{color:var(--amber);}
+.service-block-dark .service-title{color:var(--warm-white);}
+.service-block-dark .service-title em{color:var(--amber);}
+.service-block-dark .service-label{color:var(--amber);}
+.service-block-dark .service-label::after{background:rgba(249,248,244,0.1);}
+.service-block-dark .service-body p{color:var(--inv-2);}
+.service-block-dark .service-item{background:rgba(249,248,244,0.03);border-color:rgba(249,248,244,0.06);}
+.service-block-dark .service-item-title{color:var(--warm-white);}
+.service-block-dark .service-item-desc{color:var(--inv-2);}
+.service-block-dark .service-tag{color:var(--inv-3);border-color:rgba(249,248,244,0.1);}
+
+/* INDUSTRIES */
+.industries-section{background:var(--ink);padding:100px 0;}
+.industries-header{margin-bottom:64px;}
+.industries-header h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,56px);font-weight:300;line-height:1.0;letter-spacing:-.015em;color:var(--warm-white);}
+.industries-header h2 em{font-style:italic;color:var(--amber);}
+.industries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.industry-item{padding:36px;border:1px solid rgba(249,248,244,0.05);transition:border-color .25s,background .25s;}
+.industry-item:hover{border-color:rgba(245,196,0,0.25);background:rgba(249,248,244,0.03);}
+.industry-name{font-family:var(--serif);font-size:24px;font-weight:300;color:var(--warm-white);margin-bottom:12px;line-height:1.15;}
+.industry-name em{font-style:italic;color:var(--amber);}
+.industry-desc{font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);line-height:1.8;}
+
+/* CTA BAND */
+.cta-band{background:var(--amber);padding:72px 0;}
+.cta-band-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+.cta-band h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,48px);font-weight:300;line-height:1.1;letter-spacing:-.01em;color:var(--ink);}
+.cta-band h2 em{font-style:italic;}
+.cta-band-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--warm-white);font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:15px 30px;transition:background .22s;}
+.btn-dark:hover{background:var(--ink-3);}
+.btn-ghost-dark{font-family:var(--sans);font-size:10.5px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid rgba(10,10,10,0.3);padding-bottom:2px;transition:border-color .2s;}
+.btn-ghost-dark:hover{border-color:var(--ink);}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:2px solid var(--amber);padding:72px 0 40px;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:56px;}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--warm-white);letter-spacing:.04em;margin-bottom:16px;}
+.footer-tagline{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);line-height:1.8;max-width:280px;margin-bottom:24px;}
+.footer-contact a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);margin-bottom:6px;transition:color .2s;}
+.footer-contact a:hover{color:var(--amber);}
+.footer-col-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);transition:color .2s;}
+.footer-links a:hover{color:var(--warm-white);}
+.footer-bottom{border-top:1px solid rgba(249,248,244,0.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy,.footer-lic{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-3);letter-spacing:.06em;}
+
+@media(max-width:1024px){nav{padding:0 32px;}.wrap{padding:0 32px;}.service-grid,.service-grid.reverse{grid-template-columns:1fr;}.overview-inner{grid-template-columns:1fr 1fr;}.industries-grid{grid-template-columns:1fr 1fr;}.footer-inner{grid-template-columns:1fr 1fr;gap:40px;}}
+@media(max-width:768px){nav{padding:0 20px;}.wrap{padding:0 20px;}.nav-links{display:none;flex-direction:column;gap:0;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--ink);padding:32px 20px;border-top:1px solid rgba(249,248,244,0.07);overflow-y:auto;}.nav-links.open{display:flex;}.nav-links li{border-bottom:1px solid rgba(249,248,244,0.06);}.nav-links a{padding:16px 0;font-size:13px;color:var(--inv-2);}.nav-links a::after{display:none;}.nav-btn{margin-top:16px;justify-content:center;}.nav-hamburger{display:flex;}.overview-inner{grid-template-columns:1fr;}.service-items{grid-template-columns:1fr;}.industries-grid{grid-template-columns:1fr;}.footer-inner{grid-template-columns:1fr;}.cta-band-inner{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="images/nax-logo.png" alt="NAX Electrical Services" class="nav-logo-img"></a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html" class="active">What We Do</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-btn">Request a Quote <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-grid"></div>
+  <div class="wrap" style="width:100%;">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow"><div class="page-ey-line"></div><span class="page-ey-text">Services</span></div>
+      <h1>One Partner.<br><em>Every System.</em></h1>
+      <p class="page-hero-sub">NAX delivers electrical, fire alarm, access control, structured cabling, and CCTV with unified coordination and single-source accountability — reducing trade gaps, accelerating decisions, and protecting your schedule from preconstruction through certificate of occupancy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW BAR -->
+<div class="overview-bar">
+  <div class="overview-inner">
+    <div class="overview-item"><span class="overview-num">01</span><span class="overview-name">Core Electrical</span></div>
+    <div class="overview-item"><span class="overview-num">02</span><span class="overview-name">Low Voltage</span></div>
+    <div class="overview-item"><span class="overview-num">03</span><span class="overview-name">Project Management</span></div>
+    <div class="overview-item"><span class="overview-num">04</span><span class="overview-name">Design-Build</span></div>
+  </div>
+</div>
+
+<!-- SERVICE 01 -->
+<div class="service-block">
+  <div class="wrap">
+    <div class="service-grid reveal">
+      <div class="service-meta">
+        <span class="service-num">01</span>
+        <div class="service-label">Core Electrical</div>
+        <div class="service-title">Electrical, Fire Alarm<br>&amp; <em>Standby Power</em></div>
+        <div class="service-tags">
+          <span class="service-tag">Power Distribution</span>
+          <span class="service-tag">Fire Alarm</span>
+          <span class="service-tag">Generators</span>
+          <span class="service-tag">LED Lighting</span>
+          <span class="service-tag">Switchgear</span>
+          <span class="service-tag">Design-Build</span>
+        </div>
+      </div>
+      <div class="service-body">
+        <p>Single-source delivery for power, life safety, and emergency systems — backed by disciplined estimating, real-time budgeting, and coordinated execution. From service infrastructure and distribution to fire alarm design-build and generator systems, NAX manages the full electrical scope under one contract.</p>
+        <p>We build complete scopes from your plans, return accurate fully loaded quotes, and own the work from rough-in through certificate of occupancy. Reducing risk, improving coordination, and supporting successful project delivery from preconstruction through closeout.</p>
+        <div class="service-items">
+          <div class="service-item">
+            <div class="service-item-title">Power Distribution</div>
+            <div class="service-item-desc">Service infrastructure, main switchgear, panel distribution, and branch circuit work across all building types.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Fire Alarm Systems</div>
+            <div class="service-item-desc">Design-build fire alarm including Notifier systems, cellular backup (StarLink), and full inspection coordination.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Standby Generators</div>
+            <div class="service-item-desc">Emergency and standby power systems sized and coordinated from utility to automatic transfer switch.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">LED Lighting &amp; Controls</div>
+            <div class="service-item-desc">Interior and exterior LED lighting systems including occupancy controls, dimming, and egress lighting.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 02 -->
+<div class="service-block-dark">
+  <div class="wrap">
+    <div class="service-grid reveal">
+      <div class="service-meta">
+        <span class="service-num">02</span>
+        <div class="service-label">Low Voltage</div>
+        <div class="service-title">Access Control,<br>CCTV &amp; <em>Structured Cabling</em></div>
+        <div class="service-tags">
+          <span class="service-tag">Access Control</span>
+          <span class="service-tag">CCTV</span>
+          <span class="service-tag">Cat6A</span>
+          <span class="service-tag">Fiber</span>
+          <span class="service-tag">HIPAA-Capable</span>
+          <span class="service-tag">ANSI/TIA</span>
+        </div>
+      </div>
+      <div class="service-body">
+        <p>Three disciplines, one contract, one accountable team. HIPAA-capable configurations are available for healthcare environments and all cabling is installed to ANSI/TIA standards — qualifying your infrastructure for manufacturer performance warranties and satisfying compliance requirements from day one.</p>
+        <p>Every system is commissioned, tested, and handed over with complete documentation at closeout. No chasing subcontractors for test reports or warranty cards — it's all in the package.</p>
+        <div class="service-items">
+          <div class="service-item">
+            <div class="service-item-title">Card Access Control</div>
+            <div class="service-item-desc">Fob, PIN, and credential-based access systems. HIPAA-capable configurations for healthcare environments.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">CCTV &amp; Surveillance</div>
+            <div class="service-item-desc">IP camera systems with NVR integration, full coverage design, and remote access configuration.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Structured Cabling</div>
+            <div class="service-item-desc">Cat6A and fiber optic installations to ANSI/TIA standards, qualifying for manufacturer performance warranties.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">System Integration</div>
+            <div class="service-item-desc">Unified coordination across all low voltage disciplines — one point of contact, one commissioning process, one closeout package.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 03 -->
+<div class="service-block">
+  <div class="wrap">
+    <div class="service-grid reveal">
+      <div class="service-meta">
+        <span class="service-num">03</span>
+        <div class="service-label">Project Management</div>
+        <div class="service-title">No Surprises.<br><em>Clean Closeout.</em></div>
+        <div class="service-tags">
+          <span class="service-tag">Preconstruction</span>
+          <span class="service-tag">Scheduling</span>
+          <span class="service-tag">As-Builts</span>
+          <span class="service-tag">Warranties</span>
+          <span class="service-tag">Punch List</span>
+          <span class="service-tag">Closeout Docs</span>
+        </div>
+      </div>
+      <div class="service-body">
+        <p>NAX manages schedule and budget in real time so your project team is never caught off guard. We identify scope variances early, communicate them clearly, and keep the project moving without disruption. At closeout you receive complete documentation — as-builts, test reports, warranties, and a punch list that is actually completed.</p>
+        <p>When you bring NAX on during preconstruction, we review the drawings for scope gaps, flag coordination issues before they become RFIs, and provide a detailed, accurate estimate that holds at closeout. No surprises at the end of a job is not a selling point — it's the baseline.</p>
+        <div class="service-items">
+          <div class="service-item">
+            <div class="service-item-title">Preconstruction Services</div>
+            <div class="service-item-desc">Scope review, drawing coordination, value engineering, and detailed estimating before a shovel hits the ground.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Real-Time Budget Tracking</div>
+            <div class="service-item-desc">Schedule and budget managed transparently throughout — no end-of-job surprises for your team or your owner.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Inspection Coordination</div>
+            <div class="service-item-desc">We manage rough-in, trim, and final inspections across all disciplines with authorities having jurisdiction.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Complete Closeout Package</div>
+            <div class="service-item-desc">As-builts, test reports, O&amp;M manuals, warranties, and a completed punch list — delivered at turnover.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE 04 -->
+<div class="service-block" style="background:#ffffff;">
+  <div class="wrap">
+    <div class="service-grid reveal">
+      <div class="service-meta">
+        <span class="service-num">04</span>
+        <div class="service-label">Specialty</div>
+        <div class="service-title">Design-Build &amp;<br><em>Complex Installations</em></div>
+        <div class="service-tags">
+          <span class="service-tag">Design-Build</span>
+          <span class="service-tag">Fast-Track</span>
+          <span class="service-tag">Engineering Support</span>
+          <span class="service-tag">Complex Scope</span>
+        </div>
+      </div>
+      <div class="service-body">
+        <p>Some projects cannot wait for a traditional engineering and design cycle. NAX brings engineering-level thinking directly to the field, compressing the gap between design and installation so your project moves from plans to operational faster.</p>
+        <p>We maintain full accountability across every phase, with the depth of experience to perform where the scope is complicated, the schedule is tight, and the margin for error is zero. Whether you need a design-build electrical package on a fast-track healthcare renovation or a complex multi-building coordination sequence, NAX has the bench strength to deliver.</p>
+        <div class="service-items">
+          <div class="service-item">
+            <div class="service-item-title">Design-Build Electrical</div>
+            <div class="service-item-desc">Full design-build delivery compressing the traditional engineering cycle — from concept to installed and commissioned.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Fast-Track Projects</div>
+            <div class="service-item-desc">Accelerated schedules with the field experience to sequence correctly under pressure. We don't slow down when it counts.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Multi-Building Coordination</div>
+            <div class="service-item-desc">Concurrent rough-in, inspection, and trim sequences across multiple structures managed without bottlenecks.</div>
+          </div>
+          <div class="service-item">
+            <div class="service-item-title">Complex Scope Management</div>
+            <div class="service-item-desc">Technically demanding projects where scope overlap, tight tolerances, or compressed timelines require real expertise.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section class="industries-section">
+  <div class="wrap">
+    <div class="industries-header reveal">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-text">Industries Served</span></div>
+      <h2>We worked in<br><em>your sector.</em></h2>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-item reveal rd1"><div class="industry-name">Commercial<br><em>&amp; Office</em></div><p class="industry-desc">Tenant fit-outs, shell-and-core, and ground-up commercial builds. NAX delivers the full electrical and low voltage package on schedule and on budget across Greater Boston and Eastern Massachusetts.</p></div>
+      <div class="industry-item reveal rd2"><div class="industry-name">Healthcare<br><em>&amp; Medical</em></div><p class="industry-desc">HIPAA-capable low voltage, critical power distribution, and life safety systems for medical offices, clinics, and healthcare facilities. Compliance documentation delivered at closeout.</p></div>
+      <div class="industry-item reveal rd3"><div class="industry-name">Higher<br><em>Education</em></div><p class="industry-desc">Campus infrastructure, dormitories, academic and research buildings requiring coordinated electrical and technology systems with tight schedule compliance.</p></div>
+      <div class="industry-item reveal rd1"><div class="industry-name">Multi-Family<br><em>Residential</em></div><p class="industry-desc">Affordable housing, market-rate, and mixed-use developments. NAX has completed multi-building residential projects across Cape Cod and Eastern Massachusetts with individually metered units and full life safety scopes.</p></div>
+      <div class="industry-item reveal rd2"><div class="industry-name">Government<br><em>&amp; Institutional</em></div><p class="industry-desc">Public sector projects with prevailing wage compliance, certified payroll, bonding requirements, and the documentation standards required by government owners.</p></div>
+      <div class="industry-item reveal rd3"><div class="industry-name">Hospitality<br><em>&amp; Retail</em></div><p class="industry-desc">Hotels, restaurants, and retail environments where schedule coordination with other trades and clean execution are non-negotiable.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-band-inner">
+      <h2>Bring your plans.<br><em>We'll take it from there.</em></h2>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="btn-dark">Request a Quote <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="projects.html" class="btn-ghost-dark">See Our Work →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div><div class="footer-logo">NAX Electrical Services, LLC</div><p class="footer-tagline">Commercial electrical, fire alarm, access control, structured cabling, and CCTV across Eastern Massachusetts. One contract. Full accountability.</p><div class="footer-contact"><a href="tel:5082960552">508-296-0552</a><a href="mailto:estimating@naxelectric.com">estimating@naxelectric.com</a><span style="font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);margin-top:6px;display:block;">Eastern Massachusetts · Cape Cod to Greater Boston</span></div></div>
+      <div><div class="footer-col-label">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="services.html">What We Do</a></li><li><a href="projects.html">Projects</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div><div class="footer-col-label">Services</div><ul class="footer-links"><li><a href="services.html">Commercial Electrical</a></li><li><a href="services.html">CCTV &amp; Surveillance</a></li><li><a href="services.html">Card Access Control</a></li><li><a href="services.html">Structured Cabling</a></li><li><a href="services.html">Fire Alarm Systems</a></li><li><a href="services.html">Standby Generators</a></li></ul></div>
+      <div><div class="footer-col-label">Industries</div><ul class="footer-links"><li><a href="services.html">Commercial</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Higher Education</a></li><li><a href="services.html">Multi-Family</a></li><li><a href="services.html">Government</a></li><li><a href="services.html">Hospitality</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 NAX Electrical Services LLC. All rights reserved.</span><span class="footer-lic">MA Licensed Electrical Contractor · MBE Certified · Bondable · Insured</span></div>
+  </div>
+</footer>
+<script>
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const hamburger=document.getElementById('hamburger');const navLinks=document.getElementById('nav-links');
+hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');navLinks.classList.remove('open');}));
+</script>
+</body>
+</html>

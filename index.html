@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAX Electrical Services, LLC — Massachusetts Electrical Contractor</title>
+<meta name="description" content="NAX Electrical Services delivers commercial electrical, fire alarm, access control, structured cabling, and CCTV across Eastern Massachusetts. One contractor. One contract. Full accountability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:        #0a0a0a;
+  --ink-2:      #111111;
+  --ink-3:      #1a1a1a;
+  --warm-white: #f5f5f5;
+  --parchment:  #eeeeee;
+  --surface:    #e8e8e8;
+  --rule:       rgba(0,0,0,0.08);
+  --rule-mid:   rgba(0,0,0,0.15);
+  --amber:      #f5c400;
+  --amber-light:#ffd500;
+  --amber-pale: rgba(245,196,0,0.08);
+  --amber-mid:  rgba(245,196,0,0.28);
+  --text:       #111111;
+  --text-2:     #444444;
+  --text-3:     #888888;
+  --inv:        rgba(245,245,245,0.92);
+  --inv-2:      rgba(245,245,245,0.50);
+  --inv-3:      rgba(245,245,245,0.18);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Outfit', sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--warm-white);color:var(--text);
+  font-family:var(--sans);font-weight:300;
+  line-height:1.65;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{text-decoration:none;color:inherit;}
+
+/* grain overlay */
+body::after{
+  content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 56px;
+  background:#0a0a0a;
+  border-bottom:2px solid var(--amber);
+  transition:height .3s;
+}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo-img{height:44px;width:auto;display:block;object-fit:contain;}
+.nav-links{display:flex;align-items:center;gap:36px;list-style:none;}
+.nav-links a{
+  font-family:var(--sans);font-size:10.5px;font-weight:400;
+  letter-spacing:.13em;text-transform:uppercase;color:rgba(245,245,245,0.55);
+  transition:color .2s;position:relative;padding-bottom:2px;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;right:0;
+  height:2px;background:var(--amber);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .28s cubic-bezier(.4,0,.2,1);
+}
+.nav-links a:hover{color:#f5f5f5;}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
+.nav-links a.active{color:#f5f5f5;}
+.nav-btn{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:#0a0a0a!important;background:var(--amber);
+  padding:11px 22px;display:inline-flex;align-items:center;gap:7px;
+  transition:background .22s;
+}
+.nav-btn::after{display:none!important;}
+.nav-btn:hover{background:var(--amber-light)!important;}
+
+/* hamburger */
+.nav-hamburger{
+  display:none;flex-direction:column;justify-content:center;gap:5px;
+  background:none;border:none;cursor:pointer;padding:8px;
+}
+.nav-hamburger span{
+  display:block;width:22px;height:1.5px;background:#f5f5f5;
+  transition:transform .3s,opacity .3s;
+}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+/* ── UTILS ── */
+.wrap{max-width:1300px;margin:0 auto;padding:0 56px;}
+.reveal{
+  opacity:0;transform:translateY(20px);
+  transition:opacity .75s cubic-bezier(.35,0,.15,1),transform .75s cubic-bezier(.35,0,.15,1);
+}
+.reveal.in{opacity:1;transform:none;}
+.rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.32s;}.rd4{transition-delay:.44s;}
+.eyebrow{display:flex;align-items:center;gap:13px;margin-bottom:16px;}
+.ey-line{width:30px;height:1px;background:var(--amber);}
+.ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+
+@keyframes fadeup{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero{
+  padding-top:72px;
+  min-height:92vh;
+  background:var(--ink);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:58fr 42fr;
+}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(100px);}
+.hero-glow-1{
+  width:700px;height:700px;top:-150px;right:-100px;
+  background:radial-gradient(circle,rgba(245,196,0,0.10) 0%,transparent 65%);
+  animation:g1 20s ease-in-out infinite;
+}
+.hero-glow-2{
+  width:400px;height:400px;bottom:-80px;left:5%;
+  background:radial-gradient(circle,rgba(245,196,0,0.05) 0%,transparent 65%);
+  animation:g2 26s ease-in-out infinite;
+}
+@keyframes g1{0%,100%{transform:translate(0,0);}50%{transform:translate(-50px,35px);}}
+@keyframes g2{0%,100%{transform:translate(0,0);}50%{transform:translate(30px,-25px);}}
+.hero-grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(249,248,244,0.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(249,248,244,0.022) 1px,transparent 1px);
+  background-size:68px 68px;
+}
+.hero-left{
+  padding:88px 60px 80px 56px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:2;
+  border-right:1px solid rgba(249,248,244,0.05);
+}
+.hero-left>*{animation:fadeup .9s cubic-bezier(.35,0,.15,1) both;}
+.hero-left>*:nth-child(1){animation-delay:.08s;}
+.hero-left>*:nth-child(2){animation-delay:.2s;}
+.hero-left>*:nth-child(3){animation-delay:.34s;}
+.hero-left>*:nth-child(4){animation-delay:.48s;}
+.hero-left>*:nth-child(5){animation-delay:.62s;}
+.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:32px;}
+.hero-ey-line{width:32px;height:1px;background:var(--amber);}
+.hero-ey-text{font-family:var(--sans);font-size:9.5px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(36px,4.4vw,72px);font-weight:300;
+  line-height:1.05;letter-spacing:-.02em;
+  color:var(--warm-white);margin-bottom:28px;
+}
+.hero h1 em{font-style:italic;color:var(--amber);}
+.hero-desc{
+  font-family:var(--sans);font-size:15px;font-weight:300;
+  color:var(--inv-2);line-height:1.88;max-width:460px;margin-bottom:48px;
+}
+.hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.btn-amber{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--amber);color:#0a0a0a;
+  font-family:var(--sans);font-size:10.5px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  padding:15px 30px;transition:box-shadow .22s,transform .22s,background .22s;
+}
+.btn-amber:hover{background:var(--amber-light);box-shadow:0 8px 32px rgba(245,196,0,0.4);transform:translateY(-2px);}
+.btn-ghost-inv{
+  font-family:var(--sans);font-size:10.5px;font-weight:400;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--inv-2);display:inline-flex;align-items:center;gap:7px;
+  border-bottom:1px solid rgba(249,248,244,0.18);padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+}
+.btn-ghost-inv:hover{color:var(--amber);border-color:var(--amber);}
+.hero-right{
+  padding:88px 56px 80px;
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:2px;
+}
+.hero-right>*{animation:fadeup .9s cubic-bezier(.35,0,.15,1) both;}
+.hero-right>*:nth-child(1){animation-delay:.28s;}
+.hero-right>*:nth-child(2){animation-delay:.42s;}
+.hero-right>*:nth-child(3){animation-delay:.60s;}
+.hero-right-label{
+  font-family:var(--sans);font-size:9.5px;font-weight:400;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--amber);
+  margin-bottom:28px;display:flex;align-items:center;gap:12px;
+}
+.hero-right-label::before{content:'';width:24px;height:1px;background:var(--amber);}
+.disc-list{display:flex;flex-direction:column;gap:1px;margin-bottom:52px;}
+.disc-item{
+  padding:20px 24px;
+  background:rgba(249,248,244,0.03);
+  border:1px solid rgba(249,248,244,0.05);
+  display:grid;grid-template-columns:auto 1fr auto;
+  align-items:center;gap:20px;
+  transition:background .3s,border-color .3s;cursor:default;
+}
+.disc-item:hover{background:rgba(249,248,244,0.06);border-color:rgba(176,125,46,0.2);}
+.disc-num{font-family:var(--serif);font-size:13px;font-weight:400;color:var(--amber);letter-spacing:.05em;}
+.disc-name{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--warm-white);letter-spacing:.01em;}
+.disc-tag{font-family:var(--sans);font-size:9px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--inv-2);white-space:nowrap;}
+.hero-bottom-rule{grid-column:1/3;height:1px;background:rgba(249,248,244,0.05);position:relative;z-index:2;}
+.hero-cred{
+  display:flex;align-items:center;gap:0;
+  border-top:1px solid rgba(249,248,244,0.07);
+  padding-top:28px;margin-top:auto;
+}
+.hero-cred-item{flex:1;display:flex;flex-direction:column;gap:4px;}
+.hero-cred-val{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--warm-white);line-height:1;letter-spacing:-.01em;}
+.hero-cred-val em{font-style:normal;font-size:16px;color:var(--amber);}
+.hero-cred-label{font-family:var(--sans);font-size:9.5px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:var(--inv-2);}
+.hero-cred-div{width:1px;height:36px;background:rgba(249,248,244,0.1);margin:0 24px;flex-shrink:0;}
+
+/* ══════════════════════════════
+   INTRO — 3 col
+══════════════════════════════ */
+.intro-section{background:#ffffff;padding:100px 0;border-bottom:1px solid var(--rule);}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;}
+.intro-col{padding:0 52px;border-right:1px solid var(--rule);}
+.intro-col:first-child{padding-left:0;}
+.intro-col:last-child{border-right:none;padding-right:0;}
+.intro-col h3{font-family:var(--serif);font-size:27px;font-weight:400;color:var(--ink);margin-bottom:16px;line-height:1.15;letter-spacing:-.005em;}
+.intro-col h3 em{font-style:italic;color:var(--amber);}
+.intro-col p{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--text-2);line-height:1.9;}
+
+/* ══════════════════════════════
+   CREDENTIALS BAR
+══════════════════════════════ */
+.creds-bar{background:var(--ink);border-top:1px solid rgba(249,248,244,0.05);border-bottom:1px solid rgba(249,248,244,0.05);padding:32px 0;}
+.creds-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+.cred-badge{display:flex;align-items:center;gap:12px;}
+.cred-icon{width:32px;height:32px;border:1px solid rgba(245,196,0,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cred-icon svg{width:15px;height:15px;stroke:var(--amber);fill:none;stroke-width:1.5;}
+.cred-text{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--inv-2);}
+.cred-div{width:1px;height:28px;background:rgba(249,248,244,0.08);}
+
+/* ══════════════════════════════
+   SECTORS
+══════════════════════════════ */
+.sectors-section{background:var(--warm-white);padding:100px 0;}
+.sectors-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px;}
+.sectors-header h2{font-family:var(--serif);font-size:clamp(36px,4vw,60px);font-weight:300;line-height:1.0;letter-spacing:-.02em;color:var(--ink);}
+.sectors-header h2 em{font-style:italic;color:var(--amber);}
+.sectors-header p{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--text-2);line-height:1.9;max-width:420px;}
+.sectors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.sector-card{
+  position:relative;height:320px;overflow:hidden;
+  background:var(--ink-3);cursor:default;
+  display:flex;flex-direction:column;justify-content:flex-end;
+}
+.sector-card-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--ink-2) 0%,var(--ink-3) 100%);
+  transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+.sector-card:hover .sector-card-bg{transform:scale(1.04);}
+.sector-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.95) 0%,rgba(10,10,10,.3) 60%,transparent 100%);
+}
+.sector-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--amber);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .45s cubic-bezier(.4,0,.2,1);z-index:4;
+}
+.sector-card:hover::after{transform:scaleX(1);}
+.sector-num{
+  position:absolute;top:24px;left:24px;z-index:3;
+  font-family:var(--serif);font-size:13px;color:rgba(245,196,0,0.5);letter-spacing:.08em;
+}
+.sector-content{position:relative;z-index:3;padding:28px;}
+.sector-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--warm-white);line-height:1.1;margin-bottom:8px;}
+.sector-name em{font-style:italic;color:var(--amber);}
+.sector-desc{font-family:var(--sans);font-size:11.5px;font-weight:300;color:var(--inv-2);line-height:1.6;letter-spacing:.02em;
+  opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;}
+.sector-card:hover .sector-desc{opacity:1;transform:none;}
+
+/* ══════════════════════════════
+   SERVICES STRIP
+══════════════════════════════ */
+.services-strip{background:var(--ink);padding:100px 0;}
+.services-header{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:64px;}
+.services-header h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,56px);font-weight:300;line-height:1.0;letter-spacing:-.015em;color:var(--warm-white);}
+.services-header h2 em{font-style:italic;color:var(--amber);}
+.services-header-right{max-width:340px;}
+.services-header-right p{font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);line-height:1.85;}
+.services-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:20px;
+  font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);border-bottom:1px solid rgba(245,196,0,0.3);padding-bottom:2px;
+  transition:border-color .2s;
+}
+.services-link:hover{border-color:var(--amber);}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(249,248,244,0.05);}
+.svc-card{
+  background:var(--ink-2);padding:40px 32px;
+  border:1px solid rgba(249,248,244,0.04);
+  transition:background .3s,border-color .3s;
+  position:relative;overflow:hidden;
+}
+.svc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--amber);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+}
+.svc-card:hover{background:#141414;border-color:rgba(245,196,0,0.1);}
+.svc-card:hover::before{transform:scaleX(1);}
+.svc-num{font-family:var(--serif);font-size:13px;color:var(--amber);letter-spacing:.08em;margin-bottom:20px;display:block;}
+.svc-title{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--warm-white);line-height:1.15;margin-bottom:16px;letter-spacing:-.005em;}
+.svc-title em{font-style:italic;color:var(--amber);}
+.svc-body{font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);line-height:1.85;}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:20px;}
+.svc-tag{font-family:var(--sans);font-size:8.5px;font-weight:400;letter-spacing:.13em;text-transform:uppercase;color:var(--inv-3);padding:4px 9px;border:1px solid rgba(249,248,244,0.08);}
+
+/* ══════════════════════════════
+   SECTORS WE SERVE
+══════════════════════════════ */
+.worked-section{background:#ffffff;padding:100px 0;border-top:1px solid var(--rule);}
+.worked-header{margin-bottom:56px;}
+.worked-header h2{font-family:var(--serif);font-size:clamp(34px,3.8vw,56px);font-weight:300;line-height:1.0;letter-spacing:-.015em;color:var(--ink);}
+.worked-header h2 em{font-style:italic;color:var(--amber);}
+.worked-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;}
+.worked-item{
+  padding:32px 24px;border:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:10px;
+  transition:border-color .25s,background .25s;
+}
+.worked-item:hover{border-color:var(--amber);background:var(--amber-pale);}
+.worked-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;}
+.worked-icon svg{width:22px;height:22px;stroke:var(--amber);fill:none;stroke-width:1.5;}
+.worked-name{font-family:var(--serif);font-size:17px;font-weight:400;color:var(--ink);line-height:1.2;}
+.worked-sub{font-family:var(--sans);font-size:10px;font-weight:300;letter-spacing:.1em;color:var(--text-3);text-transform:uppercase;}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer{background:var(--ink);border-top:2px solid var(--amber);padding:72px 0 40px;}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:56px;}
+.footer-brand{}
+.footer-logo{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--warm-white);letter-spacing:.04em;margin-bottom:16px;}
+.footer-tagline{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);line-height:1.8;max-width:280px;margin-bottom:24px;}
+.footer-contact a{display:block;font-family:var(--sans);font-size:13px;font-weight:300;color:var(--inv-2);margin-bottom:6px;transition:color .2s;}
+.footer-contact a:hover{color:var(--amber);}
+.footer-col-label{font-family:var(--sans);font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);transition:color .2s;}
+.footer-links a:hover{color:var(--warm-white);}
+.footer-bottom{border-top:1px solid rgba(249,248,244,0.07);padding-top:28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-3);letter-spacing:.06em;}
+.footer-lic{font-family:var(--sans);font-size:11px;font-weight:300;color:var(--inv-3);letter-spacing:.06em;}
+
+/* ══════════════════════════════
+   MOBILE
+══════════════════════════════ */
+@media(max-width:1024px){
+  nav{padding:0 32px;}
+  .wrap{padding:0 32px;}
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-left{padding:100px 32px 60px;}
+  .hero-right{padding:40px 32px 60px;border-top:1px solid rgba(249,248,244,0.05);}
+  .hero-bottom-rule{grid-column:1/2;}
+  .intro-grid{grid-template-columns:1fr;}
+  .intro-col{padding:32px 0;border-right:none;border-bottom:1px solid var(--rule);}
+  .intro-col:last-child{border-bottom:none;}
+  .sectors-header{grid-template-columns:1fr;}
+  .sectors-grid{grid-template-columns:1fr 1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .worked-grid{grid-template-columns:repeat(3,1fr);}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:40px;}
+}
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .wrap{padding:0 20px;}
+  .nav-links{
+    display:none;flex-direction:column;gap:0;
+    position:fixed;top:72px;left:0;right:0;bottom:0;
+    background:var(--ink);padding:32px 20px;
+    border-top:1px solid rgba(249,248,244,0.07);
+    overflow-y:auto;
+  }
+  .nav-links.open{display:flex;}
+  .nav-links li{border-bottom:1px solid rgba(249,248,244,0.06);}
+  .nav-links a{padding:16px 0;font-size:13px;color:var(--inv-2);}
+  .nav-links a::after{display:none;}
+  .nav-btn{margin-top:16px;justify-content:center;}
+  .nav-hamburger{display:flex;}
+  .sectors-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
+  .worked-grid{grid-template-columns:repeat(2,1fr);}
+  .footer-inner{grid-template-columns:1fr;}
+  .creds-inner{flex-direction:column;align-items:flex-start;}
+  .cred-div{display:none;}
+  .services-header{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo"><img src="images/nax-logo.png" alt="NAX Electrical Services" class="nav-logo-img"></a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html" class="nav-btn">
+      Request a Quote
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-grid-bg"></div>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-ey-line"></div>
+      <span class="hero-ey-text">Eastern Massachusetts · MA Licensed · MBE Certified · Bondable</span>
+    </div>
+    <h1>50+ Years of<br>Combined Experience.<br><em>Built on Execution.</em></h1>
+    <p class="hero-desc">
+      From preconstruction through closeout, NAX brings seasoned electrical expertise, proactive communication, and solution-driven execution to every project. We identify issues early, protect schedule and budget, and deliver with the urgency today's projects demand.
+    </p>
+    <div class="hero-actions">
+      <a href="projects.html" class="btn-amber">
+        See Our Work
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="contact.html" class="btn-ghost-inv">Request a Quote →</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-right-label">Five Disciplines · One Contract</div>
+    <div class="disc-list">
+      <div class="disc-item">
+        <span class="disc-num">01</span>
+        <span class="disc-name">Electrical Contracting</span>
+        <span class="disc-tag">Commercial · Industrial · Design-Build</span>
+      </div>
+      <div class="disc-item">
+        <span class="disc-num">02</span>
+        <span class="disc-name">Fire Alarm Systems</span>
+        <span class="disc-tag">Design-Build · Notifier · Life Safety</span>
+      </div>
+      <div class="disc-item">
+        <span class="disc-num">03</span>
+        <span class="disc-name">CCTV &amp; Surveillance</span>
+        <span class="disc-tag">IP · NVR · Full Integration</span>
+      </div>
+      <div class="disc-item">
+        <span class="disc-num">04</span>
+        <span class="disc-name">Card Access Control</span>
+        <span class="disc-tag">Fob · PIN · HIPAA-Capable</span>
+      </div>
+      <div class="disc-item">
+        <span class="disc-num">05</span>
+        <span class="disc-name">Structured Cabling</span>
+        <span class="disc-tag">Cat6A · Fiber · ANSI/TIA Certified</span>
+      </div>
+    </div>
+    <div class="hero-cred">
+      <div class="hero-cred-item">
+        <div class="hero-cred-val">50<em>+</em></div>
+        <div class="hero-cred-label">Years combined experience</div>
+      </div>
+      <div class="hero-cred-div"></div>
+      <div class="hero-cred-item">
+        <div class="hero-cred-val">Est.<em> '22</em></div>
+        <div class="hero-cred-label">Founded in Massachusetts</div>
+      </div>
+      <div class="hero-cred-div"></div>
+      <div class="hero-cred-item">
+        <div class="hero-cred-val" style="font-size:18px;letter-spacing:.04em;line-height:1.2;">MBE<br><span style="font-size:13px;color:var(--amber);font-family:var(--sans);font-weight:300;letter-spacing:.06em;">Certified</span></div>
+        <div class="hero-cred-label">Minority Business Enterprise</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-rule"></div>
+</section>
+
+<!-- INTRO — 3 col -->
+<section class="intro-section">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="intro-col reveal rd1">
+        <h3>One Partner for<br><em>Critical Building Systems.</em></h3>
+        <p>Through a single contract, NAX delivers electrical, fire alarm, access control, structured cabling, and CCTV with unified coordination and single-source accountability. The result: fewer trade gaps, faster decision-making, reduced risk, and cleaner execution from rough-in to certificate of occupancy — across projects throughout Eastern Massachusetts.</p>
+      </div>
+      <div class="intro-col reveal rd2">
+        <h3>Integrated<br><em>Design-Build Solutions.</em></h3>
+        <p>NAX delivers fully integrated design-build electrical solutions across all disciplines — power distribution, fire alarm, CCTV and surveillance, access control, and structured cabling. We support commercial, healthcare, higher education, technology, government, and hospitality projects with one team, one contract, and full accountability from concept through certificate of occupancy.</p>
+      </div>
+      <div class="intro-col reveal rd3">
+        <h3>Built from<br><em>the ground up.</em></h3>
+        <p>NAX was founded in 2022 by Juan Pimentel — an electrician who started studying the trade in high school and spent nearly two decades working every role from journeyman to Chief Estimator. The estimating discipline, the communication standards, the closeout process were not adopted from a template. They were built from years of doing it on both sides of the contract.</p>
+        <p style="margin-top:16px;"><a href="about.html" style="font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);border-bottom:1px solid rgba(245,196,0,0.3);padding-bottom:2px;transition:border-color .2s;">Our Story →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS BAR -->
+<div class="creds-bar">
+  <div class="wrap">
+    <div class="creds-inner">
+      <div class="cred-badge">
+        <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <span class="cred-text">MA Licensed Electrical Contractor</span>
+      </div>
+      <div class="cred-div"></div>
+      <div class="cred-badge">
+        <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <span class="cred-text">MBE Certified</span>
+      </div>
+      <div class="cred-div"></div>
+      <div class="cred-badge">
+        <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <span class="cred-text">Fully Bonded &amp; Insured</span>
+      </div>
+      <div class="cred-div"></div>
+      <div class="cred-badge">
+        <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <span class="cred-text">50+ Years Combined Experience</span>
+      </div>
+      <div class="cred-div"></div>
+      <div class="cred-badge">
+        <div class="cred-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <span class="cred-text">Eastern Massachusetts</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES STRIP -->
+<section class="services-strip">
+  <div class="wrap">
+    <div class="services-header reveal">
+      <h2>What We<br><em>Deliver.</em></h2>
+      <div class="services-header-right">
+        <p>Four integrated disciplines. One accountable team. NAX manages the full scope under a single contract — reducing risk, improving coordination, and keeping your project on schedule from preconstruction through closeout.</p>
+        <a href="services.html" class="services-link">View All Services →</a>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal rd1">
+        <span class="svc-num">01</span>
+        <div class="svc-title">Core <em>Electrical</em></div>
+        <p class="svc-body">Single-source delivery for power, life safety, and emergency systems backed by disciplined estimating, real-time budgeting, and coordinated execution. From service infrastructure and distribution to fire alarm design-build and generator systems.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Power Distribution</span>
+          <span class="svc-tag">Fire Alarm</span>
+          <span class="svc-tag">Generators</span>
+          <span class="svc-tag">LED Lighting</span>
+        </div>
+      </div>
+      <div class="svc-card reveal rd2">
+        <span class="svc-num">02</span>
+        <div class="svc-title">Low <em>Voltage</em></div>
+        <p class="svc-body">Three disciplines, one contract, one accountable team. HIPAA-capable configurations available for healthcare environments. All cabling installed to ANSI/TIA standards, qualifying your infrastructure for manufacturer performance warranties.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Access Control</span>
+          <span class="svc-tag">CCTV</span>
+          <span class="svc-tag">Structured Cabling</span>
+          <span class="svc-tag">Cat6A · Fiber</span>
+        </div>
+      </div>
+      <div class="svc-card reveal rd3">
+        <span class="svc-num">03</span>
+        <div class="svc-title">Project <em>Management</em></div>
+        <p class="svc-body">No surprises. Clean closeout. NAX manages schedule and budget in real time so your project team is never caught off guard. We identify scope variances early, communicate them clearly, and keep the project moving without disruption.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Preconstruction</span>
+          <span class="svc-tag">Scheduling</span>
+          <span class="svc-tag">As-Builts</span>
+          <span class="svc-tag">Closeout Docs</span>
+        </div>
+      </div>
+      <div class="svc-card reveal rd4">
+        <span class="svc-num">04</span>
+        <div class="svc-title">Design-Build &amp; <em>Complex Installs</em></div>
+        <p class="svc-body">Some projects cannot wait for a traditional engineering cycle. NAX brings engineering-level thinking directly to the field, compressing the gap between design and installation so your project moves from plans to operational faster.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Design-Build</span>
+          <span class="svc-tag">Fast-Track</span>
+          <span class="svc-tag">Complex Scope</span>
+          <span class="svc-tag">Full Accountability</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS WE SERVE -->
+<section class="worked-section">
+  <div class="wrap">
+    <div class="worked-header reveal">
+      <div class="eyebrow"><div class="ey-line"></div><span class="ey-text">Industries Served</span></div>
+      <h2>We Worked in<br><em>Your Sector.</em></h2>
+    </div>
+    <div class="sectors-grid reveal">
+      <div class="sector-card">
+        <div class="sector-card-bg"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">01</span>
+        <div class="sector-content">
+          <div class="sector-name">Commercial<br><em>&amp; Office</em></div>
+          <div class="sector-desc">Tenant fit-outs, shell-and-core, ground-up commercial builds across Greater Boston.</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-bg" style="background:linear-gradient(135deg,#0f1a14 0%,#1a2a1e 100%);"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">02</span>
+        <div class="sector-content">
+          <div class="sector-name">Healthcare<br><em>&amp; Medical</em></div>
+          <div class="sector-desc">HIPAA-capable low voltage, critical power, and life safety for healthcare environments.</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-bg" style="background:linear-gradient(135deg,#0f0f1a 0%,#1a1a2a 100%);"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">03</span>
+        <div class="sector-content">
+          <div class="sector-name">Higher<br><em>Education</em></div>
+          <div class="sector-desc">Campus infrastructure, dormitories, academic buildings, and research facilities.</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-bg" style="background:linear-gradient(135deg,#1a0f0f 0%,#2a1a1a 100%);"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">04</span>
+        <div class="sector-content">
+          <div class="sector-name">Multi-Family<br><em>Residential</em></div>
+          <div class="sector-desc">Affordable housing, market-rate, and mixed-use developments across Cape Cod and beyond.</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-bg" style="background:linear-gradient(135deg,#0f1a1a 0%,#1a2a2a 100%);"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">05</span>
+        <div class="sector-content">
+          <div class="sector-name">Government<br><em>&amp; Institutional</em></div>
+          <div class="sector-desc">Public sector projects with prevailing wage compliance, bonding, and certified documentation.</div>
+        </div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-card-bg" style="background:linear-gradient(135deg,#1a1a0f 0%,#2a2a1a 100%);"></div>
+        <div class="sector-overlay"></div>
+        <span class="sector-num">06</span>
+        <div class="sector-content">
+          <div class="sector-name">Hospitality<br><em>&amp; Retail</em></div>
+          <div class="sector-desc">Hotels, restaurants, and retail environments requiring precise scheduling and clean execution.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">NAX Electrical Services, LLC</div>
+        <p class="footer-tagline">Commercial electrical, fire alarm, access control, structured cabling, and CCTV across Eastern Massachusetts. One contract. Full accountability.</p>
+        <div class="footer-contact">
+          <a href="tel:5082960552">508-296-0552</a>
+          <a href="mailto:estimating@naxelectric.com">estimating@naxelectric.com</a>
+          <span style="font-family:var(--sans);font-size:12px;font-weight:300;color:var(--inv-2);margin-top:6px;display:block;line-height:1.6;">Eastern Massachusetts · Cape Cod to Greater Boston</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-label">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">What We Do</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Services</div>
+        <ul class="footer-links">
+          <li><a href="services.html">Commercial Electrical</a></li>
+          <li><a href="services.html">CCTV &amp; Surveillance</a></li>
+          <li><a href="services.html">Card Access Control</a></li>
+          <li><a href="services.html">Structured Cabling</a></li>
+          <li><a href="services.html">Fire Alarm Systems</a></li>
+          <li><a href="services.html">Standby Generators</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-label">Industries</div>
+        <ul class="footer-links">
+          <li><a href="services.html">Commercial</a></li>
+          <li><a href="services.html">Healthcare</a></li>
+          <li><a href="services.html">Higher Education</a></li>
+          <li><a href="services.html">Multi-Family</a></li>
+          <li><a href="services.html">Government</a></li>
+          <li><a href="services.html">Hospitality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 NAX Electrical Services LLC. All rights reserved.</span>
+      <span class="footer-lic">MA Licensed Electrical Contractor · MBE Certified · Bondable · Insured</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver(e => {
+  e.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); }});
+}, {threshold:.06, rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+// Close on link click
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
